@@ -1,20 +1,25 @@
-
+// Copyright 2022 Yangson Choi. All rights reserved.
 
 #include <cctype>
 #include <iostream>
+#include <string>
 
-int main(int argc, char **argv)
-{
-  if (argc == 1)
-  {
-    std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-  } 
-  else 
-  {
-    for (int i = 1 ; i < argc ; ++i)
-      for (int j = 0 ; argv[i][j] ; ++j)
-        std::cout << static_cast<char>(std::toupper(argv[i][j]));
-    std::cout << std::endl;
-  }
-  return 0;
+using std::cout;
+using std::endl;
+using std::string;
+using std::toupper;
+
+int main(int argc, char** argv) {
+    if (argc == 1) {
+        cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << endl;
+        return 0;
+    }
+    for (int i = 1; i < argc; ++i) {
+      string msg = argv[i];
+      for (string::size_type i = 0; i != msg.size(); ++i)
+        msg[i] = toupper(msg[i]);
+          cout << msg;
+    }
+    cout << endl;
+    return 0;
 }
