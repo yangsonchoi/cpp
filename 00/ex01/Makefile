@@ -18,25 +18,23 @@ SRCS_LIST	= Main.cpp			\
 						PhoneBook.cpp
 SRCS		= $(addprefix $(SRCS_DIR), $(SRCS_LIST))
 
-OBJS_DIR	= ./
+OBJS_DIR	=  object/
 OBJS_LIST	= $(patsubst %.c, %.o, $(SRCS_LIST))
 OBJS	= $(addprefix $(OBJS_DIR), $(OBJS_LIST))
 
 all: $(NAME)
 
-%.o: %.cpp %.hpp
-	$(LINT) $^
-	$(CXX) $(CXXFLAGS) -c $<
+ 
 
-main.o: main.cpp
+Main.o: Main.cpp
 	$(LINT) $<
 	$(CXX) $(CXXFLAGS) -c $<
 
-$(NAME): $(OBJS) main.o
+$(NAME): $(OBJS) Main.o
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
 clean:
-	$(RM) $(RMFLAGS) $(OBJS) main.o
+	$(RM) $(RMFLAGS) $(OBJS)
 
 fclean: clean
 	$(RM) $(RMFLAGS) $(NAME)

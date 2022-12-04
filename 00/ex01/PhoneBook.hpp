@@ -32,20 +32,19 @@ class Contact {
 
 class PhoneBook {
  public:
-  PhoneBook() : contact_count_(0), index_(0) {}
+  PhoneBook() : index_(0) {}
   
   void AddContact();
-  void SearchContact();
+  void SearchContact() const;
   
  private:
-  void Add();
-  void PrintAll();
-  void PrintContact(size_t i);
+  void Add(const Contact&);
+  void PrintAll() const;
+  void PrintContact(size_t) const;
 
   static const size_t kMaxContact = 8;
 
   Contact contact_[kMaxContact];
-  size_t contact_count_;
   size_t index_;
 };
 
