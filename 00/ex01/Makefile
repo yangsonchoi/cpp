@@ -1,7 +1,7 @@
 NAME		= PhoneBook
 
 CXX			= c++
-CXXFLAGS	= -Wall -Wextra -Werror -std=c++98 -I..
+CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
 INCLDUES	= -I$(HDRS_DIR)
 
 RM 			= rm
@@ -18,25 +18,24 @@ SRCS_LIST	= Main.cpp			\
 						PhoneBook.cpp
 SRCS		= $(addprefix $(SRCS_DIR), $(SRCS_LIST))
 
-OBJS_DIR	=  object/
+OBJS_DIR	=  ./
 OBJS_LIST	= $(patsubst %.c, %.o, $(SRCS_LIST))
 OBJS	= $(addprefix $(OBJS_DIR), $(OBJS_LIST))
 
-all: $(NAME)
+all : $(NAME)
 
- 
+$(NAME) :$(OBJS_DIR) $(OBJS)
+	$(CXX) $(CXXFLAGS) $(INCLUDES) $(OBJS) -o $(NAME)
 
-Main.o: Main.cpp
-	$(LINT) $<
-	$(CXX) $(CXXFLAGS) -c $<
+$(OBJS_DIR)%.o : $(SRCS_DIR)%.c $(HDRS)
+	$(CXX) $(CXXFLAGS) -c $(INCLUDES) $< -o $@
 
-$(NAME): $(OBJS) Main.o
-	$(CXX) $(CXXFLAGS) -o $@ $^
+clean :
+	$(RM) $(RMFLAGS) $(OBJS_DIR) $(OBJS)
 
-clean:
-	$(RM) $(RMFLAGS) $(OBJS)
-
-fclean: clean
+fclean : clean
 	$(RM) $(RMFLAGS) $(NAME)
 
-.PHONY: all clean fclean re
+re : fclean $(NAME)
+
+.PHONY : all clean fclean re
