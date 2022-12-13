@@ -1,9 +1,10 @@
 // Copyright 2022 Yangson Choi. All rights reserved.
 
-#include "ex01/PhoneBook.hpp"
+#include "PhoneBook.hpp"
 
 #include <iostream>
 #include <string>
+#include <iomanip>
 
 using std::istream;
 using std::string;
@@ -14,8 +15,7 @@ using std::endl;
 using std::exit;
 using std::numeric_limits;
 using std::streamsize;
-
-
+using std::setw;
 
 istream& Contact::set_field(istream& input_stream, string& set_string) {
   static const string kWhitespace = " \f\r\n\t\v";
@@ -23,7 +23,7 @@ istream& Contact::set_field(istream& input_stream, string& set_string) {
   if (input_stream.fail())
     return input_stream;
   getline(input_stream >> ws, set_string);
-  set_string.erase(set_string.find_last_not_of(kWhitespace));
+  set_string.erase(set_string.find_last_not_of(kWhitespace) + 1);
   return input_stream;
 }
 
@@ -54,10 +54,10 @@ void  PhoneBook::AddContact() {
 void PhoneBook::PrintAll() const {
   cout << "Index     |First     |Last      |Nickname" << endl;
   for (size_t i = 0; i != kMaxContact; ++i) {
-    cout << i << "        " << "|";
-    cout << contact_[i].first_name() << "|";
-    cout << contact_[i].last_name() << "|";
-    cout << contact_[i].nickname() << endl;
+    cout << setw(10) << i << "|";
+    cout << setw(10) << contact_[i].first_name() << "|";
+    cout << setw(10) << contact_[i].last_name() << "|";
+    cout << setw(10) << contact_[i].nickname() << endl;
   }
 }
 

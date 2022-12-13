@@ -41,6 +41,8 @@ class PhoneBook {
   void Add(const Contact&);
   void PrintAll() const;
   void PrintContact(size_t) const;
+  
+  std::string trunc(string);
 
   static const size_t kMaxContact = 8;
 

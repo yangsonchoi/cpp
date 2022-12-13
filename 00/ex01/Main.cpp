@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 
-#include "ex01/PhoneBook.hpp"
+#include "PhoneBook.hpp"
 
 using std::cin;
 using std::cout;
@@ -23,7 +23,7 @@ int main() {
   while (true) {
     cout << "Enter a command(ADD, SEARCH, EXIT): ";
     getline(cin >> ws, cmd);
-    cmd.erase(cmd.find_last_not_of(kWhitespace));
+    cmd.erase(cmd.find_last_not_of(kWhitespace) + 1);
     if (cin.fail() || cmd == "EXIT") {
       break;
     } else if (cmd == "ADD") {

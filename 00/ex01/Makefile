@@ -15,11 +15,11 @@ HDRS		= $(addprefix $(HDRS_DIR), $(HDRS_LIST))
 
 SRCS_DIR	= ./
 SRCS_LIST	= Main.cpp			\
-						PhoneBook.cpp
+			  PhoneBook.cpp
 SRCS		= $(addprefix $(SRCS_DIR), $(SRCS_LIST))
 
-OBJS_DIR	=  ./
-OBJS_LIST	= $(patsubst %.c, %.o, $(SRCS_LIST))
+OBJS_DIR	=  object/
+OBJS_LIST	= $(patsubst %.cpp, %.o, $(SRCS_LIST))
 OBJS	= $(addprefix $(OBJS_DIR), $(OBJS_LIST))
 
 all : $(NAME)
@@ -27,7 +27,10 @@ all : $(NAME)
 $(NAME) :$(OBJS_DIR) $(OBJS)
 	$(CXX) $(CXXFLAGS) $(INCLUDES) $(OBJS) -o $(NAME)
 
-$(OBJS_DIR)%.o : $(SRCS_DIR)%.c $(HDRS)
+$(OBJS_DIR) : 
+	mkdir -p $(OBJS_DIR)
+
+$(OBJS_DIR)%.o : $(SRCS_DIR)%.cpp $(HDRS)
 	$(CXX) $(CXXFLAGS) -c $(INCLUDES) $< -o $@
 
 clean :
