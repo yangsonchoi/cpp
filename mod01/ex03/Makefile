@@ -1,6 +1,6 @@
 #Copyright 2022 Yangson Choi. All rights reserved.
 
-NAME		= PhoneBook
+NAME		= UnnecessaryViolence
 
 CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
@@ -12,14 +12,16 @@ RMFLAGS		= -rf
 LINT 		= cpplint
 
 HDRS_DIR	= ../
-HDRS_LIST	= ex01/Contact.hpp	\
-						ex01/PhoneBook.hpp
+HDRS_LIST	= ex03/Weapon.hpp	\
+						ex03/HumanA.hpp	\
+						ex03/HumanB.hpp
 HDRS		= $(addprefix $(HDRS_DIR), $(HDRS_LIST))
 
 SRCS_DIR	= ./
-SRCS_LIST	= main.cpp			\
-						Contact.cpp	\
-					  PhoneBook.cpp
+SRCS_LIST	= main.cpp				\
+						Weapon.cpp			\
+						HumanA.cpp			\
+						HumanB.cpp
 SRCS		= $(addprefix $(SRCS_DIR), $(SRCS_LIST))
 
 OBJS_DIR	=  object/

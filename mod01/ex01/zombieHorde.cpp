@@ -10,6 +10,6 @@ Zombie* zombieHorde(int n, string name) {
   Zombie* pHorde = new Zombie[n];
 
   for (int i = 0 ; i < n ; ++i)
-    pHorde[i].setName(name);
+    pHorde[i].set_name(name);
   return pHorde;
 }
