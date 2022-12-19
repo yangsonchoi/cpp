@@ -1,6 +1,6 @@
 #Copyright 2022 Yangson Choi. All rights reserved.
 
-NAME		= UnnecessaryViolence
+NAME		= UV
 
 CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98

@@ -4,8 +4,13 @@
 #include "ex03/HumanA.hpp"
 #include "ex03/HumanB.hpp"
 
+void checkleak(void) {
+  system("leaks UV");
+}
+
 int main() {
 {
+  atexit(checkleak);
   Weapon club = Weapon("crude spiked club");
 
   HumanA bob("Bob", club);
