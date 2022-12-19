@@ -12,7 +12,7 @@ using std::ostream;
 using std::string;
 using std::getline;
 
-void Replace(ostream& out, const string& line,
+void ft_replace(ostream& out, const string& line,
                             const string& what, const string& to) {
   string::size_type pos = 0;
   string::size_type index = line.find(what, pos);
@@ -47,7 +47,7 @@ int main(int argc, char** argv) {
   string to(argv[3]);
   string line;
   while (getline(in, line))
-    Replace(out, line, what, to);
+    ft_replace(out, line, what, to);
   in.close();
   out.close();
   return 0;
