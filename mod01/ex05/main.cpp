@@ -10,19 +10,10 @@ using std::endl;
 int main(void) {
   Harl h;
 
-  cout << "--- Input \"debug\" ---" << endl;
-  h.complain("debug");
-  cout << "--- Input \"bacon\" ---" << endl;
-  h.complain("bacon");
-  cout << "--- Input \"burger\" ---" << endl;
-  h.complain("burger");
-  cout << "--- Input \"DEBUG\" ---" << endl;
+  h.complain("error");
   h.complain("DEBUG");
-  cout << "--- Input \"INFO\" ---" << endl;
   h.complain("INFO");
-  cout << "--- Input \"WARNING\" ---" << endl;
   h.complain("WARNING");
-  cout << "--- Input \"ERROR\" ---" << endl;
   h.complain("ERROR");
   return 0;
 }

@@ -1,7 +1,7 @@
 // Copyright 2022 Yangson Choi. All rights reserved.
 
-#ifndef MOD01_EX05_HARL_HPP_
-#define MOD01_EX05_HARL_HPP_
+#ifndef MOD01_EX06_HARL_HPP_
+#define MOD01_EX06_HARL_HPP_
 
 #include <string>
 
@@ -17,10 +17,11 @@ class Harl {
   void info() const;
   void warning() const;
   void error() const;
+  void fatal() const;
 
   static const size_t kLevelCount = 4;
   static const fpHarlLevel fp_level_[kLevelCount];
   static const char* const p_level_str_[kLevelCount];
 };
 
-#endif  //  MOD01_EX05_HARL_HPP_
+#endif  //  MOD01_EX06_HARL_HPP_

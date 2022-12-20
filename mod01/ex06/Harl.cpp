@@ -1,6 +1,6 @@
 // Copyright 2022 Yangson Choi. All rights reserved.
 
-#include "ex05/Harl.hpp"
+#include "ex06/Harl.hpp"
 
 #include <iostream>
 #include <string>
@@ -21,7 +21,7 @@ const char* const Harl::p_level_str_[kLevelCount] = { "DEBUG",
                                            "ERROR",
 };
 
-void Harl::debug(void) const {
+void Harl::debug() const {
   cout << "[ DEBUG ]" << endl
     << "I love to get extra bacon for my "
     << "7XL-double-cheese-triple-pickle-special-ketchup burger." << endl
@@ -29,7 +29,7 @@ void Harl::debug(void) const {
     << endl << endl;
 }
 
-void Harl::info(void) const {
+void Harl::info() const {
   cout << "[ INFO ]" << endl
     << "I cannot believe adding extra bacon cost more money." << endl
     << "You don’t put enough!" << endl
@@ -37,7 +37,7 @@ void Harl::info(void) const {
     << endl << endl;
 }
 
-void Harl::warning(void) const {
+void Harl::warning() const {
   cout <<  "[ WARNING ]" << endl
     << "I think I deserve to have some extra bacon for free." << endl
     << "I’ve been coming here for years and "
@@ -45,17 +45,34 @@ void Harl::warning(void) const {
     << endl << endl;
 }
 
-void Harl::error(void) const {
+void Harl::error() const {
   cout <<  "[ ERROR ]" << endl
     << "This is unacceptable, I want to speak to the manager now."
     << endl << endl;
 }
 
+void Harl::fatal() const {
+  cout <<  "[ Probably complaining about insignificant problems ]"
+    << endl << endl;
+}
+
 void Harl::complain(string level) {
-  for (size_t i = 0; i < kLevelCount; ++i) {
-    if (level == p_level_str_[i]) {
-      (this->*fp_level_[i])();
-      return;
-    }
+  size_t i;
+  for (i = 0; i < kLevelCount; ++i) {
+    if (level == p_level_str_[i])
+      break;
+  }
+  switch (i) {
+    case 0:
+      (this->*fp_level_[0])();
+    case 1:
+      (this->*fp_level_[1])();
+    case 2:
+      (this->*fp_level_[2])();
+    case 3:
+      (this->*fp_level_[3])();
+      break;
+    default:
+      Harl::fatal();
   }
 }
