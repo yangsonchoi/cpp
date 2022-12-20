@@ -3,21 +3,23 @@
 #ifndef MOD01_EX05_HARL_HPP_
 #define MOD01_EX05_HARL_HPP_
 
+#include <string>
+
 class Harl {
  public:
   void complain(std::string level);
 
  private:
-  void debug(void);
-  void info(void);
-  void warning(void);
-  void error(void);
+  typedef void (Harl::*fpHarlLevel)() const;
 
-  typedef *fpHarl (Harl::*fp)(void);
+  void debug() const;
+  void info() const;
+  void warning() const;
+  void error() const;
 
   static const size_t kLevelCount = 4;
-  static void (Harl::*fpComplain[kLevelCount])(void);
-  const std::string levels_[kLevelCount];
+  static const fpHarlLevel fp_level_[kLevelCount];
+  static const char* const p_level_str_[kLevelCount];
 };
 
 #endif  //  MOD01_EX05_HARL_HPP_

@@ -1,6 +1,6 @@
 #Copyright 2022 Yangson Choi. All rights reserved.
 
-NAME		= Harl2.0
+NAME		= Harl
 
 CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
