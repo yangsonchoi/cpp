@@ -8,7 +8,7 @@ using std::ws;
 using std::getline;
 
 istream& Contact::set_field(istream& input_stream, string& set_string) {
-  static const string kWhitespace = " \f\r\n\t\v";
+  string kWhitespace = " \f\r\n\t\v";
 
   if (input_stream.fail())
     return input_stream;
