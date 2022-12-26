@@ -1,16 +1,15 @@
 // Copyright 2022 Yangson Choi. All rights reserved.
 
-#include "ex00/ClapTrap.hpp"
+#include "ex01/ClapTrap.hpp"
 
 #include <iostream>
-
 
 using std::cout;
 using std::endl;
 using std::string;
 
 ClapTrap::ClapTrap()
-    : name_(DEFAULT_NAME), current_hp_(kFullHP),
+    : name_(C_NAME), current_hp_(kFullHP),
     current_ep_(kFullEP), attack_damage_(kDefaultAD) {
   cout << get_name() << ": Recompiling my combat code(Default constructor)";
   cout << endl;

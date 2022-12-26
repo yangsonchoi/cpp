@@ -1,11 +1,11 @@
 // Copyright 2022 Yangson Choi. All rights reserved.
 
-#ifndef MOD03_EX00_CLAPTRAP_HPP_
-#define MOD03_EX00_CLAPTRAP_HPP_
+#ifndef MOD03_EX01_CLAPTRAP_HPP_
+#define MOD03_EX01_CLAPTRAP_HPP_
 
 #include <string>
 
-#define DEFAULT_NAME "CL4P-TP"
+#define C_NAME "CL4P-TP"
 
 class ClapTrap {
  public :
@@ -31,15 +31,16 @@ class ClapTrap {
   void takeDamage(unsigned int);
   void beRepaired(unsigned int);
 
- private :
-  static const unsigned int kFullHP = 10;
-  static const unsigned int kFullEP = 10;
-  static const unsigned int kDefaultAD = 0;
-
+ protected :
   std::string name_;
   unsigned int current_hp_;
   unsigned int current_ep_;
   unsigned int attack_damage_;
+
+ private :
+  static const unsigned int kFullHP = 10;
+  static const unsigned int kFullEP = 10;
+  static const unsigned int kDefaultAD = 0;
 };
 
-#endif  // MOD03_EX00_CLAPTRAP_HPP_
+#endif  // MOD03_EX01_CLAPTRAP_HPP_

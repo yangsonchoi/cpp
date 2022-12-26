@@ -12,12 +12,14 @@ RMFLAGS		= -rf
 LINT 		= cpplint
 
 HDRS_DIR	= ../
-HDRS_LIST	= ex00/ClapTrap.hpp	\
+HDRS_LIST	= ex01/ClapTrap.hpp	\
+						ex01/ScavTrap.hpp
 HDRS		= $(addprefix $(HDRS_DIR), $(HDRS_LIST))
 
 SRCS_DIR	= ./
 SRCS_LIST	= main.cpp				\
-						ClapTrap.cpp
+						ClapTrap.cpp		\
+						ScavTrap.cpp
 SRCS		= $(addprefix $(SRCS_DIR), $(SRCS_LIST))
 
 OBJS_DIR	=  object/
