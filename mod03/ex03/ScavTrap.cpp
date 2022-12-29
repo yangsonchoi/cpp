@@ -1,10 +1,11 @@
 // Copyright 2022 Yangson Choi. All rights reserved.
 
-#include "ex01/ScavTrap.hpp"
+#include "ex03/ScavTrap.hpp"
 
 #include <iostream>
+#include <string>
 
-#include "ex01/ClapTrap.hpp"
+#include "ex03/ClapTrap.hpp"
 
 using std::cout;
 using std::endl;

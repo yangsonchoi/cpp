@@ -1,8 +1,9 @@
 // Copyright 2022 Yangson Choi. All rights reserved.
 
-#include "ex01/ClapTrap.hpp"
+#include "ex02/ClapTrap.hpp"
 
 #include <iostream>
+#include <string>
 
 using std::cout;
 using std::endl;

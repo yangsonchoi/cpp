@@ -1,7 +1,7 @@
 // Copyright 2022 Yangson Choi. All rights reserved.
 
-#ifndef MOD03_EX01_CLAPTRAP_HPP_
-#define MOD03_EX01_CLAPTRAP_HPP_
+#ifndef MOD03_EX02_CLAPTRAP_HPP_
+#define MOD03_EX02_CLAPTRAP_HPP_
 
 #include <string>
 
@@ -48,4 +48,4 @@ class ClapTrap {
   static const unsigned int kDefaultAD = 0;
 };
 
-#endif  // MOD03_EX01_CLAPTRAP_HPP_
+#endif  // MOD03_EX02_CLAPTRAP_HPP_

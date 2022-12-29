@@ -1,6 +1,6 @@
 #Copyright 2022 Yangson Choi. All rights reserved.
 
-NAME		= ScavTrap
+NAME		= FragTrap
 
 CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
@@ -12,14 +12,16 @@ RMFLAGS		= -rf
 LINT 		= cpplint
 
 HDRS_DIR	= ../
-HDRS_LIST	= ex01/ClapTrap.hpp	\
-						ex01/ScavTrap.hpp
+HDRS_LIST	= ex02/ClapTrap.hpp	\
+						ex02/ScavTrap.hpp	\
+						ex02/FragTrap.hpp
 HDRS		= $(addprefix $(HDRS_DIR), $(HDRS_LIST))
 
 SRCS_DIR	= ./
 SRCS_LIST	= main.cpp				\
 						ClapTrap.cpp		\
-						ScavTrap.cpp
+						ScavTrap.cpp		\
+						FragTrap.cpp
 SRCS		= $(addprefix $(SRCS_DIR), $(SRCS_LIST))
 
 OBJS_DIR	=  object/
