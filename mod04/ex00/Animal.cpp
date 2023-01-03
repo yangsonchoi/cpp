@@ -8,7 +8,7 @@
 using std::cout;
 using std::endl;
 
-Animal::Animal() : type_("Animal") {
+Animal::Animal() : type_(A_TYPE) {
   cout << get_type() << ": Default Constructor [ Animal ]" << endl;
 }
 
@@ -19,6 +19,7 @@ Animal::Animal(const Animal& a) : type_(a.get_type()) {
 Animal& Animal::operator=(const Animal& a) {
   cout << "Copy Assignment operator called [ Animal ]" << endl;
   type_ = a.get_type();
+  return *this;
 }
 
 Animal::~Animal() {

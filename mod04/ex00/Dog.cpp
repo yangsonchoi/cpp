@@ -5,10 +5,13 @@
 #include <iostream>
 #include <string>
 
+#include "ex00/Animal.hpp"
+
 using std::cout;
 using std::endl;
 
 Dog::Dog() : Animal() {
+  type_ = D_TYPE;
   cout << get_type() << ": Default Constructor [ Dog ]" << endl;
 }
 
@@ -19,6 +22,7 @@ Dog::Dog(const Dog& d) : Animal(d) {
 Dog& Dog::operator=(const Dog& d) {
   cout << "Copy Assignment operator called [ Dog ]" << endl;
   type_ = d.get_type();
+  return *this;
 }
 
 Dog::~Dog() {

@@ -7,6 +7,8 @@
 
 #include "ex00/Animal.hpp"
 
+#define C_TYPE "Cat"
+
 class Cat : public Animal {
  public :
   Cat();
@@ -14,7 +16,7 @@ class Cat : public Animal {
 
   Cat& operator=(const Cat&);
 
-  ~Cat();
+  virtual ~Cat();
 
   void makeSound() const;
 };

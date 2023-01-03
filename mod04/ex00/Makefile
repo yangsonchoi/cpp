@@ -1,6 +1,6 @@
 #Copyright 2022 Yangson Choi. All rights reserved.
 
-NAME		= DiamondTrap
+NAME		= Polymorphism
 
 CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
@@ -12,9 +12,11 @@ RMFLAGS		= -rf
 LINT 		= cpplint
 
 HDRS_DIR	= ../
-HDRS_LIST	= ex00/Animal.hpp	\
-						ex00/Dog.hpp		\
-						ex00/Cat.hpp
+HDRS_LIST	= ex00/Animal.hpp				\
+						ex00/Dog.hpp					\
+						ex00/Cat.hpp					\
+						ex00/WrongAnimal.hpp	\
+						ex00/WrongCat.hpp
 
 HDRS		= $(addprefix $(HDRS_DIR), $(HDRS_LIST))
 
@@ -22,7 +24,9 @@ SRCS_DIR	= ./
 SRCS_LIST	= main.cpp				\
 						Animal.cpp			\
 						Dog.cpp					\
-						Cat.cpp
+						Cat.cpp					\
+						WrongAnimal.cpp	\
+						WrongCat.cpp
 
 SRCS		= $(addprefix $(SRCS_DIR), $(SRCS_LIST))
 

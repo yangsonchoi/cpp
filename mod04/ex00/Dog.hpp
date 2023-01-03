@@ -7,6 +7,8 @@
 
 #include "ex00/Animal.hpp"
 
+#define D_TYPE "Dog"
+
 class Dog : public Animal {
  public :
   Dog();
@@ -14,7 +16,7 @@ class Dog : public Animal {
 
   Dog& operator=(const Dog&);
 
-  ~Dog();
+  virtual ~Dog();
 
   void makeSound() const;
 };

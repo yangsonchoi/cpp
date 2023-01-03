@@ -1,6 +1,6 @@
 // Copyright 2022 Yangson Choi. All rights reserved.
 
-#include "ex00/cat.hpp"
+#include "ex00/Cat.hpp"
 
 #include <iostream>
 #include <string>
@@ -11,6 +11,7 @@ using std::cout;
 using std::endl;
 
 Cat::Cat() : Animal() {
+  type_ = C_TYPE;
   cout << get_type() << ": Default Constructor [ Cat ]" << endl;
 }
 
@@ -21,6 +22,7 @@ Cat::Cat(const Cat& c) : Animal(c) {
 Cat& Cat::operator=(const Cat& c) {
   cout << "Copy Assignment operator called [ Cat ]" << endl;
   type_ = c.get_type();
+  return *this;
 }
 
 Cat::~Cat() {

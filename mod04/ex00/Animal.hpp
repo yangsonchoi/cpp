@@ -5,6 +5,8 @@
 
 #include <string>
 
+#define A_TYPE "Animal"
+
 class Animal {
  public :
   Animal();
@@ -12,7 +14,7 @@ class Animal {
 
   Animal& operator=(const Animal&);
 
-  ~Animal();
+  virtual ~Animal();
 
   std::string get_type() const { return type_; }
   void set_type(const std::string type) { type_ = type; } 

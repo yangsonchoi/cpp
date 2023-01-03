@@ -5,26 +5,49 @@
 #include "ex00/Animal.hpp"
 #include "ex00/Cat.hpp"
 #include "ex00/Dog.hpp"
+#include "ex00/WrongAnimal.hpp"
+#include "ex00/WrongCat.hpp"
 
 using std::cout;
 using std::endl;
 
 int main() {
-  const Animal* a = new Animal();
-  const Animal* c = new Cat();
-  const Animal* d = new Dog();
-
-  a->makeSound();
-  c->makeSound();
-  d->makeSound();
-  cout << endl;
-
-  cout << a->get_type() << endl;
-	cout << c->get_type() << endl;
-	cout << d->get_type() << endl;
+  const Animal* meta = new Animal();
+  const Animal* i = new Dog();
+  const Animal* j = new Cat();
 
   cout << endl;
-  delete d;
-  delete c;
-  delete a;
+  meta->makeSound();
+  i->makeSound();
+  j->makeSound();
+  cout << endl;
+
+  cout << meta->get_type() << endl;
+  cout << i->get_type() << endl;
+  cout << j->get_type() << endl;
+
+  cout << endl;
+  delete meta;
+  delete i;
+  delete j;
+  cout << endl;
+
+  const WrongAnimal* wmeta = new WrongAnimal();
+  const WrongAnimal* k = new WrongCat();
+  const WrongCat* l = new WrongCat();
+
+  cout << endl;
+  wmeta->makeSound();
+  k->makeSound();
+  l->makeSound();
+  cout << endl;
+
+  cout << wmeta->get_type() << endl;
+  cout << k->get_type() << endl;
+  cout << l->get_type() << endl;
+
+  cout << endl;
+  delete wmeta;
+  delete k;
+  delete l;
 }
