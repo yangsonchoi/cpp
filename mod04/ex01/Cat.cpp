@@ -42,3 +42,7 @@ void Cat::PrintBrain() const {
   for (int i = 0; i < I_SIZE; ++i)
     cout << cat_brain_->get_idea(i) << endl;
 }
+
+void Cat::InputIdea(const int i, const std::string idea) const {
+  cat_brain_->set_idea(i, idea);
+}

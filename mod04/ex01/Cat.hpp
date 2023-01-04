@@ -21,6 +21,7 @@ class Cat : public Animal {
 
   void makeSound() const;
   void PrintBrain() const;
+  void InputIdea(const int, const std::string) const;
 
  private :
   Brain* cat_brain_;

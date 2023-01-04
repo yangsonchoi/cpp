@@ -3,6 +3,7 @@
 #include "ex01/Dog.hpp"
 
 #include <iostream>
+#include <sstream>
 #include <string>
 
 #include "ex01/Animal.hpp"
@@ -10,6 +11,7 @@
 
 using std::cout;
 using std::endl;
+using std::stringstream;
 
 Dog::Dog() : Animal() {
   type_ = D_TYPE;
@@ -39,6 +41,11 @@ void Dog::makeSound() const {
 }
 
 void Dog::PrintBrain() const {
+  cout << get_type() << "'s ideas" << endl;
   for (int i = 0; i < I_SIZE; ++i)
     cout << dog_brain_->get_idea(i) << endl;
+}
+
+void Dog::InputIdea(const int i, const std::string idea) const {
+  dog_brain_->set_idea(i, idea);
 }

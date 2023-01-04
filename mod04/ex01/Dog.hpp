@@ -21,6 +21,7 @@ class Dog : public Animal {
 
   void makeSound() const;
   void PrintBrain() const;
+  void InputIdea(const int, const std::string) const;
 
  private :
   Brain* dog_brain_;

@@ -20,6 +20,8 @@ class Brain {
   std::string get_idea(const int& i) const { return ideas_[i]; }
 
  private :
+  void InitialBrain();
+
   std::string ideas_[I_SIZE];
 };
 

@@ -3,12 +3,16 @@
 #include "ex01/Brain.hpp"
 
 #include <iostream>
+#include <sstream>
+#include <string>
 
 using std::cout;
 using std::endl;
+using std::stringstream;
 
 Brain::Brain() {
   cout << "Default Constructor [ Brain ]" << endl;
+  InitialBrain();
 }
 
 Brain::Brain(const Brain& b) {
@@ -26,4 +30,12 @@ Brain& Brain::operator=(const Brain& b) {
 
 Brain::~Brain() {
   cout << "Destructor [ Brain ]" << endl;
+}
+
+void Brain::InitialBrain() {
+  for (int i = 0; i < I_SIZE; ++i) {
+    stringstream buf;
+    buf << "[ Idea " << i << " ]";
+    set_idea(i, buf.str());
+  }
 }

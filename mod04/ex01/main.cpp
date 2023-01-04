@@ -17,31 +17,50 @@ using std::endl;
 int main() {
   // atexit(CheckLeak);
 
-  const Animal* meta = new Animal();
-  const Dog* i = new Dog();
-  const Animal* j = new Cat();
-  const Dog* k;
+  // const Animal* TempAnimal = new Animal();
+  // const Dog* i = new Dog();
+  // const Animal* j = new Cat();
+  // const Dog* k;
 
-  k = new Dog(*i);
+  // k = new Dog(*i);
 
-  cout << endl;
-  meta->makeSound();
-  i->makeSound();
-  j->makeSound();
-  k->makeSound();
-  cout << endl;
+  // cout << endl;
+  // TempAnimal->makeSound();
+  // i->makeSound();
+  // j->makeSound();
+  // k->makeSound();
+  // cout << endl;
 
-  cout << meta->get_type() << endl;
-  cout << i->get_type() << endl;
-  cout << j->get_type() << endl;
-  cout << k->get_type() << endl;
+  // cout << TempAnimal->get_type() << endl;
+  // cout << i->get_type() << endl;
+  // cout << j->get_type() << endl;
+  // cout << k->get_type() << endl;
 
-  i->PrintBrain(); // to set brain, cant access set_idea from main, needs set_brain to set_idea
+  // cout << endl;
+  // i->PrintBrain();
 
-  cout << endl;
-  delete meta;
-  delete i;
-  delete j;
-  delete k;
-  cout << endl;
+  // cout << endl;
+  // delete TempAnimal;
+  // delete i;
+  // delete j;
+  // delete k;
+  // cout << endl;
+
+  Animal* meta[20];
+  Dog*  Burger;
+
+  for (int i = 0 ; i < 20 ; ++i) {
+    if (i % 2 == 0) {
+      meta[i] = new Cat();
+    } else {
+      meta[i] = new Dog();
+    }
+  }
+  Burger = new Dog((*dynamic_cast<Dog*>(meta[1])));
+  dynamic_cast<Dog*>(meta[1])->InputIdea(1, "HEY I JUST MET YOU");
+  dynamic_cast<Dog*>(meta[1])->PrintBrain();
+  for (int i = 0 ; i < I_SIZE / 5 ; ++i)
+    delete meta[i];
+  Burger->PrintBrain();
+  delete Burger;
 }
