@@ -1,10 +1,12 @@
 // Copyright 2022 Yangson Choi. All rights reserved.
 
-#ifndef MOD04_EX00_BUREAUCRAT_HPP_
-#define MOD04_EX00_BUREAUCRAT_HPP_
+#ifndef MOD04_EX01_BUREAUCRAT_HPP_
+#define MOD04_EX01_BUREAUCRAT_HPP_
 
 #include <exception>
 #include <string>
+
+class Form;
 
 #define GRADE_MAX           1
 #define GRADE_MIN           150
@@ -33,6 +35,7 @@ class Bureaucrat {
 
   void IncrementGrade();
   void DecrementGrade();
+  void SignForm(Form*) const;
 
  private:
   Bureaucrat();
@@ -43,4 +46,4 @@ class Bureaucrat {
 
 std::ostream& operator<<(std::ostream& o, const Bureaucrat& b);
 
-#endif  // MOD04_EX00_BUREAUCRAT_HPP_
+#endif  // MOD04_EX01_BUREAUCRAT_HPP_

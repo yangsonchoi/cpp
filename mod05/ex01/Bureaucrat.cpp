@@ -6,10 +6,14 @@
 #include <string>
 #include <iostream>
 
+#include "ex01/Form.hpp"
+
 using std::cout;
 using std::endl;
+using std::cerr;
 using std::string;
 using std::ostream;
+using std::exception;
 
 const char* Bureaucrat::GradeTooHighException::what(void) const throw() {
   return "Bureaucrat Grade Too High";
@@ -35,7 +39,7 @@ Bureaucrat::Bureaucrat(const string& name, const int& grade)
     throw GradeTooHighException();
   if (grade_ > GRADE_MIN)
     throw GradeTooLowException();
-  cout << "Name, Int Constructor" << endl;
+  cout << "Name, Int Beureaucrat Constructor" << endl;
 }
 
 Bureaucrat& Bureaucrat::operator=(const Bureaucrat& b) {
@@ -58,6 +62,16 @@ void Bureaucrat::DecrementGrade() {
   if (grade_ + 1 > GRADE_MIN)
     throw GradeTooLowException();
   ++grade_;
+}
+
+void Bureaucrat::SignForm(Form* f) const {
+  try {
+    f->BeSigned(*this);
+    cout << name_ << " signs " << f->get_name() << endl;
+  } catch (exception& e) {
+    cerr << name_ << " cannot sign "
+      << f->get_name() << " because " << e.what() << endl;
+  }
 }
 
 ostream& operator<<(ostream& o, const Bureaucrat& b) {
