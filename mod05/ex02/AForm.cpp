@@ -1,11 +1,11 @@
 // Copyright 2022 Yangson Choi. All rights reserved.
 
-#include "ex01/Form.hpp"
+#include "ex02/AForm.hpp"
 
 #include <string>
 #include <iostream>
 
-#include "ex01/Bureaucrat.hpp"
+#include "ex02/Bureaucrat.hpp"
 
 using std::string;
 using std::cout;
@@ -13,11 +13,15 @@ using std::endl;
 using std::ostream;
 
 const char* Form::GradeTooHighException::what(void) const throw() {
-  return "Form Grade Too High";
+  return "grade is too high.";
 }
 
 const char* Form::GradeTooLowException::what(void) const throw() {
-  return "Form Grade Too Low";
+  return "grade is too low.";
+}
+
+const char* Form::FormNotSigned::what(void) const throw() {
+  return "form is not signed.";
 }
 
 Form::Form() {}

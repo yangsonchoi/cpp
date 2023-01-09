@@ -12,15 +12,22 @@ RMFLAGS		= -rf
 LINT 		= cpplint
 
 HDRS_DIR	= ../
-HDRS_LIST	= ex01/Bureaucrat.hpp		\
-						ex01/Form.hpp
+HDRS_LIST	= ex02/Bureaucrat.hpp
+						ex02/AForm.hpp
+						ex02/ShrubberyCreationForm.hpp
+						ex02/RobotomyRequestForm.hpp
+						ex02/PresidentialPardonForm.hpp
 
 HDRS		= $(addprefix $(HDRS_DIR), $(HDRS_LIST))
 
 SRCS_DIR	= ./
-SRCS_LIST	= main.cpp				\
-						Bureaucrat.cpp	\
-						Form.cpp
+SRCS_LIST	= main.cpp
+						Bureaucrat.cpp
+						AForm.cpp
+						ShrubberyCreationForm.cpp
+						RobotomyRequestForm.cpp
+						PresidentialPardonForm.cpp
+						
 
 SRCS		= $(addprefix $(SRCS_DIR), $(SRCS_LIST))
 

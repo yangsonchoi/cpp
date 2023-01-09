@@ -1,7 +1,7 @@
 // Copyright 2022 Yangson Choi. All rights reserved.
 
-#ifndef MOD04_EX01_BUREAUCRAT_HPP_
-#define MOD04_EX01_BUREAUCRAT_HPP_
+#ifndef MOD05_EX01_BUREAUCRAT_HPP_
+#define MOD05_EX01_BUREAUCRAT_HPP_
 
 #include <exception>
 #include <string>
@@ -46,4 +46,4 @@ class Bureaucrat {
 
 std::ostream& operator<<(std::ostream& o, const Bureaucrat& b);
 
-#endif  // MOD04_EX01_BUREAUCRAT_HPP_
+#endif  // MOD05_EX01_BUREAUCRAT_HPP_
