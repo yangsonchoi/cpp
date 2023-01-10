@@ -33,6 +33,7 @@ class Bureaucrat {
 
   void IncrementGrade();
   void DecrementGrade();
+  void exectueForm();
 
  private:
   Bureaucrat();

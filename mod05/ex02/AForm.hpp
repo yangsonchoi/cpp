@@ -39,7 +39,7 @@ class Form {
   const bool& get_signed() const { return signed_; }
 
   void BeSigned(const Bureaucrat&);
-  virtual void BeExecuted(const Bureaucrat&) const = 0;
+  virtual void execute(const Bureaucrat&) const = 0;
 
  protected :
   std::string name_;

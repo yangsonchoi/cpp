@@ -61,4 +61,3 @@ int main() {
   Burger->PrintBrain();
   delete Burger;
 }
-  

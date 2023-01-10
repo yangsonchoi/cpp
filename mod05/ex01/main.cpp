@@ -28,9 +28,9 @@ int main(void) {
     << f3 << endl;
   cout << endl;
 
-  yachoi.SignForm(&f1);
-  ean.SignForm(&f2);
-  ean.SignForm(&f3);
+  yachoi.SignForm(f1);
+  ean.SignForm(f2);
+  ean.SignForm(f3);
   cout << endl;
 
   cout << f1 << endl

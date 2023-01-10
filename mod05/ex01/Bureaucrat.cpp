@@ -64,13 +64,13 @@ void Bureaucrat::DecrementGrade() {
   ++grade_;
 }
 
-void Bureaucrat::SignForm(Form* f) const {
+void Bureaucrat::SignForm(Form& f) const {
   try {
-    f->BeSigned(*this);
-    cout << name_ << " signs " << f->get_name() << endl;
+    f.BeSigned(*this);
+    cout << name_ << " signs " << f.get_name() << endl;
   } catch (exception& e) {
     cerr << name_ << " cannot sign "
-      << f->get_name() << " because " << e.what() << endl;
+      << f.get_name() << " because " << e.what() << endl;
   }
 }
 

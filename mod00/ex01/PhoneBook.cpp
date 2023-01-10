@@ -74,7 +74,7 @@ void PhoneBook::SearchContact() const {
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
     return;
   }
-  cin.ignore(numeric_limits<streamsize>::max(), '\n');
+  // cin.ignore(numeric_limits<streamsize>::max(), '\n');
   PrintContact(i);
 }
 

@@ -11,18 +11,17 @@
 class ShrubberyCreationForm : public Form {
  public :
   ShrubberyCreationForm(const ShrubberyCreationForm&);
+  ShrubberyCreationForm(const std::string&);
   ShrubberyCreationForm(const std::string&, const int& sign, const int& execute);
 
   ShrubberyCreationForm& operator=(const ShrubberyCreationForm&);
 
   virtual ~ShrubberyCreationForm();
 
-  void BeExecuted(const Bureaucrat&) const;
+  void execute(const Bureaucrat&) const;
 
  private :
   ShrubberyCreationForm();
 };
-
-std::ostream& operator<<(std::ostream&, const Form&);
 
 #endif  // MOD05_EX02_SHRUBBERYCREATIONFORM_HPP_
