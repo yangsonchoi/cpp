@@ -1,12 +1,13 @@
 // Copyright 2022 Yangson Choi. All rights reserved.
 
-#ifndef MOD05_EX02_SHRUBBERYCREATIONFORM_HPP_
-#define MOD05_EX02_SHRUBBERYCREATIONFORM_HPP_
+#ifndef MOD05_EX03_SHRUBBERYCREATIONFORM_HPP_
+#define MOD05_EX03_SHRUBBERYCREATIONFORM_HPP_
 
-#include "ex02/AForm.hpp"
+#include "ex03/AForm.hpp"
 
 #define S_GRADE_SIGN 145
 #define S_GRADE_EXE 137
+#define S_REQUEST "Shrubbery Request"
 
 class ShrubberyCreationForm : public Form {
  public :
@@ -23,4 +24,4 @@ class ShrubberyCreationForm : public Form {
   ShrubberyCreationForm();
 };
 
-#endif  // MOD05_EX02_SHRUBBERYCREATIONFORM_HPP_
+#endif  // MOD05_EX03_SHRUBBERYCREATIONFORM_HPP_

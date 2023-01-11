@@ -1,12 +1,13 @@
 // Copyright 2022 Yangson Choi. All rights reserved.
 
-#ifndef MOD05_EX02_ROBOTOBYREQUESTFORM_HPP_
-#define MOD05_EX02_ROBOTOBYREQUESTFORM_HPP_
+#ifndef MOD05_EX03_ROBOTOMYREQUESTFORM_HPP_
+#define MOD05_EX03_ROBOTOMYREQUESTFORM_HPP_
 
-#include "ex02/AForm.hpp"
+#include "ex03/AForm.hpp"
 
 #define R_GRADE_SIGN 72
 #define R_GRADE_EXE 45
+#define R_REQUEST "Robotmy Request"
 
 class RobotomyRequestForm : public Form {
  public :
@@ -25,4 +26,4 @@ class RobotomyRequestForm : public Form {
 
 std::ostream& operator<<(std::ostream&, const Form&);
 
-#endif  // MOD05_EX02_ROBOTOBYREQUESTFORM_HPP_
+#endif  // MOD05_EX03_ROBOTOBYREQUESTFORM_HPP_

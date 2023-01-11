@@ -1,12 +1,13 @@
 // Copyright 2022 Yangson Choi. All rights reserved.
 
-#ifndef MOD05_EX02_PRESIDENTIALPARDONFORM_HPP_
-#define MOD05_EX02_PRESIDENTIALPARDONFORM_HPP_
+#ifndef MOD05_EX03_PRESIDENTIALPARDONFORM_HPP_
+#define MOD05_EX03_PRESIDENTIALPARDONFORM_HPP_
 
-#include "ex02/AForm.hpp"
+#include "ex03/AForm.hpp"
 
 #define P_GRADE_SIGN 25
 #define P_GRADE_EXE 5
+#define P_REQUEST "Pardon Request"
 
 class PresidentialPardonForm : public Form {
  public :
@@ -25,4 +26,4 @@ class PresidentialPardonForm : public Form {
 
 std::ostream& operator<<(std::ostream&, const Form&);
 
-#endif  // MOD05_EX02_PRESIDENTIALPARDONFORM_HPP_
+#endif  // MOD05_EX03_PRESIDENTIALPARDONFORM_HPP_
