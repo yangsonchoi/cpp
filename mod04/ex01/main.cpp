@@ -17,12 +17,14 @@ using std::endl;
 int main() {
   // atexit(CheckLeak);
 
-  // const Animal* TempAnimal = new Animal();
-  // const Dog* i = new Dog();
-  // const Animal* j = new Cat();
-  // const Dog* k;
+  const Animal* TempAnimal = new Animal();
+  const Dog* i = new Dog();
+  const Animal* j = new Cat();
+  const Dog* k;
 
-  // k = new Dog(*i);
+  k = new Dog(*i);
+
+  Dog test()
 
   // cout << endl;
   // TempAnimal->makeSound();
@@ -46,21 +48,21 @@ int main() {
   // delete k;
   // cout << endl;
 
-  Animal* meta[20];
-  Dog*  Burger;
+  // Animal* meta[20];
+  // Dog*  Burger;
 
-  for (int i = 0 ; i < 20 ; ++i) {
-    if (i % 2 == 0) {
-      meta[i] = new Cat();
-    } else {
-      meta[i] = new Dog();
-    }
-  }
-  Burger = new Dog((*dynamic_cast<Dog*>(meta[1])));
-  dynamic_cast<Dog*>(meta[1])->InputIdea(1, "HEY I JUST MET YOU");
-  dynamic_cast<Dog*>(meta[1])->PrintBrain();
-  for (int i = 0 ; i < I_SIZE / 5 ; ++i)
-    delete meta[i];
-  Burger->PrintBrain();
-  delete Burger;
+  // for (int i = 0 ; i < 20 ; ++i) {
+  //   if (i % 2 == 0) {
+  //     meta[i] = new Cat();
+  //   } else {
+  //     meta[i] = new Dog();
+  //   }
+  // }
+  // Burger = new Dog((*dynamic_cast<Dog*>(meta[1])));
+  // dynamic_cast<Dog*>(meta[1])->InputIdea(1, "HEY I JUST MET YOU");
+  // dynamic_cast<Dog*>(meta[1])->PrintBrain();
+  // for (int i = 0 ; i < I_SIZE / 5 ; ++i)
+  //   delete meta[i];
+  // Burger->PrintBrain();
+  // delete Burger;
 }

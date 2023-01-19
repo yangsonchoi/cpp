@@ -31,6 +31,7 @@ int main(void) {
 
   cout << endl;
   d1.attack(d2.get_name());
+  d1.ClapTrap::attack(d2.get_name());
   d2.takeDamage(d1.get_damage());
 
   cout << endl;

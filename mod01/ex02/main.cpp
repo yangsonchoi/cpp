@@ -14,6 +14,7 @@ int main() {
 
   cout << &hi << endl;
   cout << stringPTR << endl;
+  cout << &stringPTR << endl;
   cout << &stringREF << endl;
 
   cout << hi << endl;

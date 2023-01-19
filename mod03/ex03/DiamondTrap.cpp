@@ -17,8 +17,8 @@ DiamondTrap::DiamondTrap()
     : ClapTrap(D_NAME) {
   name_ = get_name();
   current_hp_ = FragTrap::get_hp();
-  current_ep_ = 50;
-  // current_ep_ = ScavTrap::get_ep();
+
+  current_ep_ = ScavTrap::get_ep();
   attack_damage_ = FragTrap::get_damage();
   cout << get_name() << ": DiamondTrap(Default constructor)" << endl;
 }

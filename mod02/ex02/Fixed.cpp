@@ -81,7 +81,7 @@ Fixed& Fixed::operator++(void) {
   return *this;
 }
 
-Fixed& Fixed::operator--(void) {
+Fixed Fixed::operator--(void) {
   --value_;
   return *this;
 }

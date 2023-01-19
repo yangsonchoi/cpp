@@ -12,14 +12,14 @@ RMFLAGS		= -rf
 LINT 		= cpplint
 
 HDRS_DIR	= ../
-HDRS_LIST	= ex00/Bureaucrat.hpp
+HDRS_LIST	= ex00/Conversion.hpp					\
 
 
 HDRS		= $(addprefix $(HDRS_DIR), $(HDRS_LIST))
 
 SRCS_DIR	= ./
 SRCS_LIST	= main.cpp										\
-						Bureaucrat.cpp
+						Conversion.cpp
 
 
 SRCS		= $(addprefix $(SRCS_DIR), $(SRCS_LIST))

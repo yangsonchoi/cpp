@@ -1,6 +1,6 @@
 #Copyright 2023 Yangson Choi. All rights reserved.
 
-NAME		= Conversion
+NAME		= Iter
 
 CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
@@ -12,14 +12,12 @@ RMFLAGS		= -rf
 LINT 		= cpplint
 
 HDRS_DIR	= ../
-HDRS_LIST	= ex00/Bureaucrat.hpp
-
+HDRS_LIST	= ex01/iter.hpp
 
 HDRS		= $(addprefix $(HDRS_DIR), $(HDRS_LIST))
 
 SRCS_DIR	= ./
-SRCS_LIST	= main.cpp										\
-						Bureaucrat.cpp
+SRCS_LIST	= main.cpp
 
 
 SRCS		= $(addprefix $(SRCS_DIR), $(SRCS_LIST))
