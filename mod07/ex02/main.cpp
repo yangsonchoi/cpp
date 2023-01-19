@@ -1,12 +1,11 @@
 // Copyright 2023 Yangson Choi. All rights reserved.
 
-#include <string>
 #include <exception>
 #include <iostream>
 
 #include "ex02/Array.hpp"
 
-#define MAX_VAL 750
+#define MAX_VAL 20
 int main(int, char**)
 {
     Array<int> numbers(MAX_VAL);
@@ -20,10 +19,21 @@ int main(int, char**)
     }
     //SCOPE
     {
-        Array<int> tmp = numbers;
-        Array<int> test(tmp);
+      Array<int> tmp = numbers;
+      Array<int> test(tmp);
+      for (int i = 0; i < MAX_VAL; i++)
+      {
+          std::cout << test[i] << std::endl;
+      }
+      for (int i = 0; i < MAX_VAL; i++)
+      {
+          if (tmp[i] != test[i])
+          {
+              std::cerr << "didn't save the same value!!" << std::endl;
+              return 1;
+          }
+      }
     }
-
     for (int i = 0; i < MAX_VAL; i++)
     {
         if (mirror[i] != numbers[i])
