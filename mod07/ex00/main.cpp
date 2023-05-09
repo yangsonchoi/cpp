@@ -15,6 +15,7 @@ int main(void) {
   std::cout << "max( a, b ) = " << ::max(a, b) << std::endl;
   std::string c = "chaine1";
   std::string d = "chaine2";
+  char c = '/r';
 
   ::swap(c, d);
   std::cout << "c = " << c << ", d = " << d << std::endl;

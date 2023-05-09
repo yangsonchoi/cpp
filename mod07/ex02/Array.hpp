@@ -23,7 +23,7 @@ class Array {
     if (size_)
       arr_ = new T[size_];
     for (std::size_t i = 0 ; i < size_ ; ++i)
-      arr_[i] = a.arr_[i];
+      arr_[i] = a.arr_[i];z
   }
 
   Array(std::size_t n)
