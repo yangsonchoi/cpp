@@ -1,6 +1,6 @@
 #Copyright 2023 Yangson Choi. All rights reserved.
 
-NAME		= easyfind
+NAME		= btc
 
 CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
@@ -12,14 +12,13 @@ RMFLAGS		= -rf
 LINT 		= cpplint
 
 HDRS_DIR	= ../
-HDRS_LIST	= ex00/Bitcoinexchange.hpp
-
+HDRS_LIST	= ex00/BitcoinExchange.hpp
 
 HDRS		= $(addprefix $(HDRS_DIR), $(HDRS_LIST))
 
 SRCS_DIR	= ./
-SRCS_LIST	= main.cpp										\
-						Bitcoinexchange.cpp
+SRCS_LIST	= main.cpp			\
+			  BitcoinExchange.cpp
 
 
 SRCS		= $(addprefix $(SRCS_DIR), $(SRCS_LIST))
@@ -37,7 +36,6 @@ $(OBJS_DIR) :
 	mkdir -p $(OBJS_DIR)
 
 $(OBJS_DIR)%.o : $(SRCS_DIR)%.cpp $(HDRS)
-	$(LINT) $<
 	$(CXX) $(CXXFLAGS) -c $(INCLUDES) $< -o $@
 
 clean :	
