@@ -1,3 +1,5 @@
+// Copyright 2022 Yangson Choi. All rights reserved.
+
 #include "BitcoinExchange.hpp"
 
 int	main(int argc, char** argv)

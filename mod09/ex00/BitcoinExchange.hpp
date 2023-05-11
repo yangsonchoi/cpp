@@ -4,40 +4,40 @@
 #define EX00_BITCOINEXCHANGE_HPP_
 
 
-# include <iostream>
-# include <fstream>
-# include <map>
-# include <string>
-# include <cstdlib>
-# include <sstream>
-# include <iomanip>
+#include <iostream>
+#include <fstream>
+#include <map>
+#include <string>
+#include <cstdlib>
+#include <sstream>
+#include <iomanip>
 
-# define BAD_INPUT -1
-# define NOT_POSITVE -2
-# define TOO_LARGE -3
-# define VALID_INPUT 1
+#define BAD_INPUT -1
+#define NOT_POSITVE -2
+#define TOO_LARGE -3
+#define VALID_INPUT 1
 
 class BitcoinExchange {
 
   public:
     BitcoinExchange();
-    BitcoinExchange(const BitcoinExchange& obj);
-    BitcoinExchange& operator=(const BitcoinExchange &obj);
+    BitcoinExchange(const BitcoinExchange&);
+    BitcoinExchange& operator=(const BitcoinExchange &);
     ~BitcoinExchange();
 
-    void    init_databse(const std::string & db_path) const;
-    void    display_exchange(const std::string & infile) const;
+    void    init_databse(const std::string &) const;
+    void    display_exchange(const std::string &) const;
 
   private:
 
-    double  get_value(const std::string & data) const;
+    double  get_value(const std::string &) const;
 
 
-    int     is_valid_input( const std::string & input_line, std::string & input_date, double* input_nb_btc ) const;
-    bool    is_valid_year(const std::string & year) const;
-    bool    is_valid_month(const std::string & month) const;
-    bool    is_valid_day(const std::string & day) const;
-    int     is_valid_input_nb_btc(double input_nb_btc) const;
+    int     is_valid_input( const std::string &, std::string &, double*) const;
+    bool    is_valid_year(const std::string &) const;
+    bool    is_valid_month(const std::string & ) const;
+    bool    is_valid_day(const std::string &) const;
+    int     is_valid_input_nb_btc(double) const;
 
     static std::map<std::string, double> db_btc_;
 

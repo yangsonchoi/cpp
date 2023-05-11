@@ -14,7 +14,7 @@ BitcoinExchange& BitcoinExchange::operator=(const BitcoinExchange& obj) {
 	if (this != &obj) {
 		db_btc_ = obj.db_btc_;
 	}
-	return (*this);
+	return *this;
 }
 
 BitcoinExchange::~BitcoinExchange() {}
