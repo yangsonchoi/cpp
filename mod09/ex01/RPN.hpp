@@ -1,4 +1,4 @@
-// Copyright 2022 Yangson Choi. All rights reserved.
+// Copyright 2023 Yangson Choi. All rights reserved.
 
 #ifndef RPN_HPP
 #define RPN_HPP
@@ -18,7 +18,7 @@ class RPN {
 
 	~RPN(void);
 
-	void  execute_operation(char *);
+	void  execute(char *);
 
   private:
 

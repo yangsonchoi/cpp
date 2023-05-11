@@ -19,7 +19,7 @@ BitcoinExchange& BitcoinExchange::operator=(const BitcoinExchange& obj) {
 
 BitcoinExchange::~BitcoinExchange() {}
 
-void	BitcoinExchange::init_databse(const std::string & db_path) const
+void	BitcoinExchange::initDatabse(const std::string & db_path) const
 {
 	std::string	line, date_btc;
 	std::size_t delim;
@@ -54,7 +54,7 @@ void	BitcoinExchange::init_databse(const std::string & db_path) const
 	db_fd.close();
 }
 
-void	BitcoinExchange::display_exchange(const std::string & infile) const
+void	BitcoinExchange::displayExchange(const std::string & infile) const
 {
 	std::ifstream	input(infile.c_str());
 	std::string		input_line, input_date = "pas mal";

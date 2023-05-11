@@ -1,3 +1,5 @@
+// Copyright 2023 Yangson Choi. All rights reserved.
+
 #include "RPN.hpp"
 
 RPN::RPN() {}
@@ -15,7 +17,7 @@ RPN& RPN::operator=(const RPN& obj) {
 
 RPN::~RPN() {}
 
-void	RPN::execute_operation(char* expr) {
+void	RPN::execute(char* expr) {
 	double		operand_1, operand_2;
 
 	int			i;

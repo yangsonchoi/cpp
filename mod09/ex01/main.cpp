@@ -12,6 +12,6 @@ int	main(int argc, char** argv)
 		return (0);
 	}
 	RPN rpn;
-	rpn.execute_operation(argv[1]);
+	rpn.execute(argv[1]);
 	return (0);
 }

@@ -13,8 +13,8 @@ int	main(int argc, char** argv)
 
 	BitcoinExchange btc;
 
-	btc.init_databse(db_path);
-	btc.display_exchange(argv[1]);
+	btc.initDatabse(db_path);
+	btc.displayExchange(argv[1]);
 
 	return (0);
 }

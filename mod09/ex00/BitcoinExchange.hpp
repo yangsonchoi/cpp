@@ -25,8 +25,8 @@ class BitcoinExchange {
     BitcoinExchange& operator=(const BitcoinExchange &);
     ~BitcoinExchange();
 
-    void    init_databse(const std::string &) const;
-    void    display_exchange(const std::string &) const;
+    void    initDatabse(const std::string &) const;
+    void    displayExchange(const std::string &) const;
 
   private:
 
